@@ -180,16 +180,30 @@ int main()
             affichage.clear();
 
             // Partie 1: Dessiner l'ellipse
+            std::cout << "Choisissez l'origin x :";
+            int orx;
+            std::cin >> orx;
+            std::cout << std::endl;
+            std::cout << "Choisissez l'origin y :";
+            int ory;
+            std::cin >> ory;
+            std::cout << std::endl;
+            std::cout << "size x :";
+            int sx;
+            std::cin >> sx;
+            std::cout << std::endl;
+            std::cout << "size y :";
+            int sy;
+            std::cin >> sy;
+            std::cout << std::endl;
             std::cout << "Dessiner l'ellipse..." << std::endl;
-            Ellipse(0, 0, 3, 1, affichage);
+            Ellipse(orx, ory, sx, sy, affichage);
         }
         if (choix == 2) {
             // Partie 2: Calculer et afficher la courbe Lagrange
             // Utile point : 1,5 // 4,2 // 3,-1 // 2,-2 // 0,-1 // -4,-3 // -4,0 // -2,2 // -1,3 // -2,3 // -5,1 // -6,1 // -6,2 // -5,2 // -2,4
             affichage.clear();
             
-            
-
             points = {{4,2},{3,-1}, {2,-2}};
             affichage.addV(Lagrange(points, 250));
 
